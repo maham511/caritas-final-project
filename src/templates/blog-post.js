@@ -4,7 +4,6 @@ import get from 'lodash/get'
 
 import Seo from '../components/seo'
 import Layout from '../components/layout'
-import Hero from '../components/hero'
 import Tags from '../components/tags'
 
 class BlogPostTemplate extends React.Component {
@@ -20,11 +19,7 @@ class BlogPostTemplate extends React.Component {
           description={post.description.childMarkdownRemark.excerpt}
           image={`http:${post.heroImage.resize.src}`}
         />
-        <Hero
-          image={post.heroImage?.gatsbyImageData}
-          title={post.title}
-          content={post.description?.childMarkdownRemark?.excerpt}
-        />
+
         <div>
           <span>
             {post.author?.name} &middot;{' '}

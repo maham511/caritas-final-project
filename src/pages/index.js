@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 
 import Layout from '../components/layout'
-import Hero from '../components/hero'
+
 import ArticlePreview from '../components/article-preview'
 
 class RootIndex extends React.Component {
@@ -13,11 +13,6 @@ class RootIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <Hero
-          image={author.heroImage.gatsbyImageData}
-          title={author.name}
-          content={author.shortBio.shortBio}
-        />
         <ArticlePreview posts={posts} />
       </Layout>
     )
