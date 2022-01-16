@@ -6,7 +6,6 @@ import Seo from '../components/seo'
 import Layout from '../components/layout'
 import Hero from '../components/hero'
 import Tags from '../components/tags'
-import * as styles from './blog-post.module.css'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -26,15 +25,14 @@ class BlogPostTemplate extends React.Component {
           title={post.title}
           content={post.description?.childMarkdownRemark?.excerpt}
         />
-        <div className={styles.container}>
-          <span className={styles.meta}>
+        <div>
+          <span>
             {post.author?.name} &middot;{' '}
             <time dateTime={post.rawDate}>{post.publishDate}</time> –{' '}
             {post.body?.childMarkdownRemark?.timeToRead} minute read
           </span>
-          <div className={styles.article}>
+          <div>
             <div
-              className={styles.body}
               dangerouslySetInnerHTML={{
                 __html: post.body?.childMarkdownRemark?.html,
               }}
@@ -42,7 +40,7 @@ class BlogPostTemplate extends React.Component {
             <Tags tags={post.tags} />
             {(previous || next) && (
               <nav>
-                <ul className={styles.articleNavigation}>
+                <ul>
                   {previous && (
                     <li>
                       <Link to={`/blog/${previous.slug}`} rel="prev">
