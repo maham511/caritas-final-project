@@ -5,7 +5,9 @@ import Container from './container'
 const Heading = () => (
   <>
     <Container>
-      <h1>Caritas</h1>
+      <Link to="/">
+        <h1>Caritas</h1>
+      </Link>
     </Container>
   </>
 )
