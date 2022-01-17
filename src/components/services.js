@@ -1,7 +1,8 @@
 import React from 'react'
 
-export const services = () => {
-    return (
+export const Services = () => 
+     (
+         <>
         <div>
            <ul>
                <li>servece1</li>
@@ -9,6 +10,8 @@ export const services = () => {
                <li>service3</li>
                <li>service4</li>
                </ul> 
+               
         </div>
+        </>
     )
-}
+
