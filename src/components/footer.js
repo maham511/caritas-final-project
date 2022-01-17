@@ -3,7 +3,7 @@ import React from 'react'
 import Container from './container'
 
 const Footer = () => (
-  <Container as="footer">
+  <Container>
     <div>
       Built with <a href="https://contentful.com/">Contentful</a> and{' '}
       <a href="https://gatsbyjs.com">Gatsby</a> &middot;{' '}
