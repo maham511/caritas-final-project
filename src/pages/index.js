@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 
 import Layout from '../components/layout'
-import CaseStudyPreview from '../components/caseStudyPreview'
+
 import Home from '../components/home'
 class RootIndex extends React.Component {
   render() {
@@ -11,9 +11,7 @@ class RootIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        {/* To do: need to change it so case studies only show on case study slug */}
         <Home />
-        <CaseStudyPreview caseStudies={caseStudies} />
       </Layout>
     )
   }
