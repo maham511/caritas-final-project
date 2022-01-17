@@ -2,8 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import get from 'lodash/get'
-
-import ArticlePreview from '../components/article-preview'
+import CaseStudyPreview from '../components/caseStudyPreview'
 
 class CaseStudyIndex extends React.Component {
   render() {
@@ -11,7 +10,7 @@ class CaseStudyIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <ArticlePreview caseStudies={caseStudies} />
+        <CaseStudyPreview caseStudies={caseStudies} />
       </Layout>
     )
   }
