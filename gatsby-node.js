@@ -4,12 +4,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
   // Define a template for blog post
-  const blogPost = path.resolve('./src/templates/blog-post.js')
+  const caseStudyTemplate = path.resolve('./src/templates/singleCaseStudy.js')
 
   const result = await graphql(
     `
       {
-        allContentfulBlogPost {
+        allContentfulCaseStudy {
           nodes {
             title
             slug
@@ -27,25 +27,26 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const posts = result.data.allContentfulBlogPost.nodes
-
-  // Create blog posts pages
-  // But only if there's at least one blog post found in Contentful
+  const caseStudies = result.data.allContentfulCaseStudy.nodes
+  console.log(caseStudies)
+  // Create case study pages
+  // But only if there's at least one case study found in Contentful
   // `context` is available in the template as a prop and as a variable in GraphQL
 
-  if (posts.length > 0) {
-    posts.forEach((post, index) => {
-      const previousPostSlug = index === 0 ? null : posts[index - 1].slug
-      const nextPostSlug =
-        index === posts.length - 1 ? null : posts[index + 1].slug
+  if (caseStudies.length > 0) {
+    caseStudies.forEach((caseStudy, index) => {
+      const previousCaseStudySlug =
+        index === 0 ? null : caseStudies[index - 1].slug
+      const nextCaseStudySlug =
+        index === caseStudies.length - 1 ? null : caseStudies[index + 1].slug
 
       createPage({
-        path: `/blog/${post.slug}/`,
-        component: blogPost,
+        path: `/caseStudy/${caseStudy.slug}/`,
+        component: caseStudyTemplate,
         context: {
-          slug: post.slug,
-          previousPostSlug,
-          nextPostSlug,
+          slug: caseStudy.slug,
+          previousCaseStudySlug,
+          nextCaseStudySlug,
         },
       })
     })

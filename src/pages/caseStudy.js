@@ -1,12 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import get from 'lodash/get'
-
 import Layout from '../components/layout'
+import get from 'lodash/get'
 
 import ArticlePreview from '../components/article-preview'
 
-class RootIndex extends React.Component {
+class CaseStudyIndex extends React.Component {
   render() {
     const caseStudies = get(this, 'props.data.allContentfulCaseStudy.nodes')
 
@@ -18,10 +17,10 @@ class RootIndex extends React.Component {
   }
 }
 
-export default RootIndex
+export default CaseStudyIndex
 
 export const pageQuery = graphql`
-  query HomeQuery {
+  query CaseStudyIndexQuery {
     allContentfulCaseStudy(sort: { fields: updatedAt }) {
       nodes {
         title

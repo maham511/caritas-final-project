@@ -5,14 +5,14 @@ const Navigation = () => (
   <nav role="navigation" aria-label="Main">
     <Link to="/">
       <span />
-      <span>Gatsby Starter Contentful</span>
+      <span>Caritas</span>
     </Link>
     <ul>
       <li>
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link to="/blog/">Blog</Link>
+        <Link to="/caseStudy/">Case Study</Link>
       </li>
     </ul>
   </nav>
