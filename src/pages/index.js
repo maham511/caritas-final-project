@@ -40,6 +40,11 @@ export const pageQuery = graphql`
             content
           }
         }
+        childContentfulCaseStudyStoryTextNode {
+          childMarkdownRemark {
+            excerpt
+          }
+        }
       }
     }
   }

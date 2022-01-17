@@ -4,7 +4,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
   // Define a template for blog post
-  const caseStudy = path.resolve('./src/templates/singleCaseStudy.js')
+  const caseStudyTemplate = path.resolve('./src/templates/singleCaseStudy.js')
 
   const result = await graphql(
     `
@@ -28,7 +28,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const caseStudies = result.data.allContentfulCaseStudy.nodes
-
+  console.log(caseStudies)
   // Create case study pages
   // But only if there's at least one case study found in Contentful
   // `context` is available in the template as a prop and as a variable in GraphQL
@@ -42,7 +42,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
       createPage({
         path: `/caseStudy/${caseStudy.slug}/`,
-        component: blogPost,
+        component: caseStudyTemplate,
         context: {
           slug: caseStudy.slug,
           previousCaseStudySlug,

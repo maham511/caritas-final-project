@@ -20,7 +20,12 @@ const ArticlePreview = ({ caseStudies }) => {
                 <h4>{caseStudy.name}</h4>
                 <GatsbyImage alt="" image={caseStudy.image.gatsbyImageData} />
               </Link>
-              <p>{caseStudy.story.internal.content}</p>
+              <p>
+                {
+                  caseStudy.childContentfulCaseStudyStoryTextNode
+                    .childMarkdownRemark.excerpt
+                }
+              </p>
             </li>
           )
         })}

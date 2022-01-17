@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import Layout from '../components/layout'
+import get from 'lodash/get'
 
 class CaseStudyTemplate extends React.Component {
   render() {
@@ -10,9 +12,12 @@ class CaseStudyTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <h2>{caseStudy.title}</h2>
         <div>
-          <Tags tags={caseStudy.tags} />
+          <h2>{caseStudy.title}</h2>
+          <h4>{caseStudy.name}</h4>
+          <GatsbyImage alt="" image={caseStudy.image.gatsbyImageData} />
+          <p>{caseStudy.story.internal.content}</p>
+          {/* <Tags tags={caseStudy.tags} />
           {(previous || next) && (
             <nav>
               <ul>
@@ -32,7 +37,7 @@ class CaseStudyTemplate extends React.Component {
                 )}
               </ul>
             </nav>
-          )}
+          )} */}
         </div>
       </Layout>
     )
@@ -41,29 +46,33 @@ class CaseStudyTemplate extends React.Component {
 
 export default CaseStudyTemplate
 
-// export const pageQuery = graphql`
-//   query CaseStudyBySlug(
-//     $slug: String!
-//     $previousPostSlug: String
-//     $nextPostSlug: String
-//   ) {
-//     contentfulCaseStudy(slug: { eq: $slug }) {
-//       slug
-//       title
-//       tags
-//       description {
-//         childMarkdownRemark {
-//           excerpt
-//         }
-//       }
-//     }
-//     previous: contentfulCaseStudy(slug: { eq: $previousPostSlug }) {
-//       slug
-//       title
-//     }
-//     next: contentfulCaseStudy(slug: { eq: $nextPostSlug }) {
-//       slug
-//       title
-//     }
-//   }
-// `
+export const pageQuery = graphql`
+  query contentfulCaseStudyBySlug($slug: String!) {
+    contentfulCaseStudy(slug: { eq: $slug }) {
+      slug
+      title
+      name
+      image {
+        gatsbyImageData(
+          layout: FULL_WIDTH
+          placeholder: BLURRED
+          width: 424
+          height: 212
+        )
+      }
+      story {
+        internal {
+          content
+        }
+      }
+    }
+  }
+`
+// previous: contentfulCaseStudy(slug: { eq: $previousCaseStudySlug }) {
+//   slug
+//   title
+// }
+// next: contentfulCaseStudy(slug: { eq: $nextCaseStudySlug }) {
+//   slug
+//   title
+// }
