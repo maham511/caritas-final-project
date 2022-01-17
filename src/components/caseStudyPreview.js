@@ -3,9 +3,8 @@ import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
 import Container from './container'
-//import Tags from './tags'
 
-const ArticlePreview = ({ caseStudies }) => {
+const CaseStudyPreview = ({ caseStudies }) => {
   if (!caseStudies) return null
   if (!Array.isArray(caseStudies)) return null
 
@@ -34,4 +33,4 @@ const ArticlePreview = ({ caseStudies }) => {
   )
 }
 
-export default ArticlePreview
+export default CaseStudyPreview
