@@ -3,10 +3,6 @@ import { Link } from 'gatsby'
 
 const Navigation = () => (
   <nav role="navigation" aria-label="Main">
-    <Link to="/">
-      <span />
-      <span>Caritas</span>
-    </Link>
     <ul>
       <li>
         <Link to="/">Home</Link>
