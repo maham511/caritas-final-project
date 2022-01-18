@@ -7,7 +7,7 @@ import Layout from '../components/layout'
 import Home from '../components/home'
 class RootIndex extends React.Component {
   render() {
-    const caseStudies = get(this, 'props.data.allContentfulCaseStudy.nodes')
+    const caseStudies = get(this, 'props.data.allContentfulCaseStudies.nodes')
 
     return (
       <Layout location={this.props.location}>
@@ -21,7 +21,7 @@ export default RootIndex
 
 export const pageQuery = graphql`
   query HomeQuery {
-    allContentfulCaseStudy(sort: { fields: updatedAt }) {
+    allContentfulCaseStudies(sort: { fields: updatedAt }) {
       nodes {
         title
         slug
@@ -39,7 +39,7 @@ export const pageQuery = graphql`
             content
           }
         }
-        childContentfulCaseStudyStoryTextNode {
+        childContentfulCaseStudiesStoryTextNode {
           childMarkdownRemark {
             excerpt
           }

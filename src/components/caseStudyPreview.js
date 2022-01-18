@@ -21,7 +21,7 @@ const CaseStudyPreview = ({ caseStudies }) => {
               </Link>
               <p>
                 {
-                  caseStudy.childContentfulCaseStudyStoryTextNode
+                  caseStudy.childContentfulCaseStudiesStoryTextNode
                     .childMarkdownRemark.excerpt
                 }
               </p>
