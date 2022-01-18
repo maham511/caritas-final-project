@@ -6,7 +6,7 @@ import CaseStudyPreview from '../components/caseStudyPreview'
 
 class CaseStudyIndex extends React.Component {
   render() {
-    const caseStudies = get(this, 'props.data.allContentfulCaseStudy.nodes')
+    const caseStudies = get(this, 'props.data.allContentfulCaseStudies.nodes')
 
     return (
       <Layout location={this.props.location}>
@@ -20,7 +20,7 @@ export default CaseStudyIndex
 
 export const pageQuery = graphql`
   query CaseStudyIndexQuery {
-    allContentfulCaseStudy(sort: { fields: updatedAt }) {
+    allContentfulCaseStudies(sort: { fields: updatedAt }) {
       nodes {
         title
         slug
@@ -38,7 +38,7 @@ export const pageQuery = graphql`
             content
           }
         }
-        childContentfulCaseStudyStoryTextNode {
+        childContentfulCaseStudiesStoryTextNode {
           childMarkdownRemark {
             excerpt
           }
