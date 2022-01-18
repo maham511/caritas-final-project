@@ -5,12 +5,10 @@ import Heading from './heading'
 import Navigation from './navigation'
 
 const Header = () => (
-  <>
-    <Container>
-      <Heading />
-      <Navigation />
-    </Container>
-  </>
+  <Container as="header">
+    <Heading />
+    <Navigation />
+  </Container>
 )
 
 export default Header
