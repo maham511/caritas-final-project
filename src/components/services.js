@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Services = () => 
      (
-         <>
+         
         <div>
            <ul>
                <li>servece1</li>
@@ -12,6 +12,6 @@ export const Services = () =>
                </ul> 
                
         </div>
-        </>
+        
     )
 
