@@ -6,7 +6,7 @@ import get from 'lodash/get'
 
 class CaseStudyTemplate extends React.Component {
   render() {
-    const caseStudy = get(this.props, 'data.contentfulCaseStudy')
+    const caseStudy = get(this.props, 'data.contentfulCaseStudies')
 
     return (
       <Layout location={this.props.location}>
@@ -25,7 +25,7 @@ export default CaseStudyTemplate
 
 export const pageQuery = graphql`
   query contentfulCaseStudyBySlug($slug: String!) {
-    contentfulCaseStudy(slug: { eq: $slug }) {
+    contentfulCaseStudies(slug: { eq: $slug }) {
       slug
       title
       name
