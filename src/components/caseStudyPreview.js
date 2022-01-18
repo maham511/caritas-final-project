@@ -14,7 +14,7 @@ const CaseStudyPreview = ({ caseStudies }) => {
         {caseStudies.map((caseStudy) => {
           return (
             <li>
-              <Link to={`/caseStudy/${caseStudy.slug}`}>
+              <Link to={`/caseStudies/${caseStudy.slug}`}>
                 <h2>{caseStudy.title}</h2>
                 <h4>{caseStudy.name}</h4>
                 <GatsbyImage alt="" image={caseStudy.image.gatsbyImageData} />

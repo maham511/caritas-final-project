@@ -9,7 +9,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(
     `
       {
-        allContentfulCaseStudy {
+        allContentfulCaseStudies {
           nodes {
             title
             slug
@@ -27,7 +27,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const caseStudies = result.data.allContentfulCaseStudy.nodes
+  const caseStudies = result.data.allContentfulCaseStudies.nodes
 
   // Create case study pages
   // But only if there's at least one case study found in Contentful
@@ -36,7 +36,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   if (caseStudies.length > 0) {
     caseStudies.forEach((caseStudy, index) => {
       createPage({
-        path: `/caseStudy/${caseStudy.slug}/`,
+        path: `/caseStudies/${caseStudy.slug}/`,
         component: caseStudyTemplate,
         context: {
           slug: caseStudy.slug,
