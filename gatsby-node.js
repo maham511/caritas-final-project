@@ -1,3 +1,4 @@
+/* eslint-disable */
 const path = require('path')
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
