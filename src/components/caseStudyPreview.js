@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import React from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
@@ -33,8 +32,3 @@ const CaseStudyPreview = ({ caseStudies }) => {
     </Container>
   )
 }
-
-CaseStudyPreview.propTypes = {
-  name: PropTypes.string,
-}
-export default CaseStudyPreview
