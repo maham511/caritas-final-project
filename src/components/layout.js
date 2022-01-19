@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import React from 'react'
 
 // import Navigation from './navigation'
@@ -12,6 +13,10 @@ const Layout = ({ children }) => {
       <Footer />
     </div>
   )
+}
+
+Layout.propTypes = {
+  children: PropTypes.object,
 }
 
 export default Layout

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import React from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
@@ -7,7 +8,7 @@ import Container from './container'
 const CaseStudyPreview = ({ caseStudies }) => {
   if (!caseStudies) return null
   if (!Array.isArray(caseStudies)) return null
-
+  console.log(caseStudies)
   return (
     <Container>
       <ul>
@@ -32,3 +33,9 @@ const CaseStudyPreview = ({ caseStudies }) => {
     </Container>
   )
 }
+
+CaseStudyPreview.propTypes = {
+  caseStudies: PropTypes.string,
+}
+
+export default CaseStudyPreview
