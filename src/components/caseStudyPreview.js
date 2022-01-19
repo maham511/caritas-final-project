@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import React from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
@@ -13,7 +14,7 @@ const CaseStudyPreview = ({ caseStudies }) => {
       <ul>
         {caseStudies.map((caseStudy) => {
           return (
-            <li>
+            <li key={caseStudy.id}>
               <Link to={`/caseStudies/${caseStudy.slug}`}>
                 <h2>{caseStudy.title}</h2>
                 <h4>{caseStudy.name}</h4>
@@ -33,4 +34,7 @@ const CaseStudyPreview = ({ caseStudies }) => {
   )
 }
 
+CaseStudyPreview.propTypes = {
+  name: PropTypes.string,
+}
 export default CaseStudyPreview
