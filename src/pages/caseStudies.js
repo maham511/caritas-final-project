@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import get from 'lodash/get'
 import CaseStudyPreview from '../components/caseStudyPreview'
+import HomePageButton from '../components/homePageButton'
 
 class CaseStudyIndex extends React.Component {
   render() {
@@ -11,6 +12,7 @@ class CaseStudyIndex extends React.Component {
     return (
       <Layout location={this.props.location}>
         <CaseStudyPreview caseStudies={caseStudies} />
+        <HomePageButton />
       </Layout>
     )
   }
