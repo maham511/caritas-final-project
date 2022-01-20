@@ -32,3 +32,5 @@ const CaseStudyPreview = ({ caseStudies }) => {
     </Container>
   )
 }
+
+export default CaseStudyPreview
