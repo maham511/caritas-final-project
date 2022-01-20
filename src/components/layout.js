@@ -1,7 +1,5 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-
-// import Navigation from './navigation'
 import Footer from './footer'
 import Header from './header'
 
@@ -16,7 +14,7 @@ const Layout = ({ children }) => {
 }
 
 Layout.propTypes = {
-  children: PropTypes.object,
+  children: PropTypes.node.isRequired,
 }
 
 export default Layout

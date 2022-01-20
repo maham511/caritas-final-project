@@ -8,7 +8,6 @@ import Container from './container'
 const CaseStudyPreview = ({ caseStudies }) => {
   if (!caseStudies) return null
   if (!Array.isArray(caseStudies)) return null
-  console.log(caseStudies)
   return (
     <Container>
       <ul>
@@ -35,7 +34,7 @@ const CaseStudyPreview = ({ caseStudies }) => {
 }
 
 CaseStudyPreview.propTypes = {
-  caseStudies: PropTypes.string,
+  caseStudies: PropTypes.any.isRequired,
 }
 
 export default CaseStudyPreview
