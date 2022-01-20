@@ -1,20 +1,23 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import get from 'lodash/get'
-
+import PropTypes from 'prop-types'
 import Layout from '../components/layout'
 
 import Home from '../components/home'
 class RootIndex extends React.Component {
   render() {
-    const caseStudies = get(this, 'props.data.allContentfulCaseStudies.nodes')
-
     return (
       <Layout location={this.props.location}>
         <Home />
       </Layout>
     )
   }
+}
+
+RootIndex.propTypes = {
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+  }).isRequired,
 }
 
 export default RootIndex

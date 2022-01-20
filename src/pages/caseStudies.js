@@ -4,6 +4,7 @@ import Layout from '../components/layout'
 import get from 'lodash/get'
 import CaseStudyPreview from '../components/caseStudyPreview'
 import HomePageButton from '../components/homePageButton'
+import PropTypes from 'prop-types'
 
 class CaseStudyIndex extends React.Component {
   render() {
@@ -18,12 +19,19 @@ class CaseStudyIndex extends React.Component {
   }
 }
 
+CaseStudyIndex.propTypes = {
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+  }).isRequired,
+}
+
 export default CaseStudyIndex
 
 export const pageQuery = graphql`
   query CaseStudyIndexQuery {
     allContentfulCaseStudies(sort: { fields: updatedAt }) {
       nodes {
+        id
         title
         slug
         name
