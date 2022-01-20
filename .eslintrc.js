@@ -15,6 +15,6 @@ module.exports = {
   plugins: ['react'],
   rules: {
     // other rules
-    'react/prop-types': 'off',
+    // 'react/prop-types': 'off',
   },
 }
