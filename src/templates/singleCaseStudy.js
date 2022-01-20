@@ -4,9 +4,17 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 import Layout from '../components/layout'
 import get from 'lodash/get'
 import PropTypes from 'prop-types'
-import CaseStudyButton from '../components/caseStudyButton'
+import Button from '../components/button'
+import { navigate } from 'gatsby'
+import { CgArrowLongLeft } from 'react-icons/cg'
 class CaseStudyTemplate extends React.Component {
   render() {
+    function handleClick(event) {
+      event.preventDefault()
+      {
+        navigate('/caseStudies/')
+      }
+    }
     const caseStudy = get(this.props, 'data.contentfulCaseStudies')
 
     return (
@@ -18,7 +26,11 @@ class CaseStudyTemplate extends React.Component {
           <p>{caseStudy.story.internal.content}</p>
         </div>
         <div>
-          <CaseStudyButton />
+          <Button
+            onClick={handleClick}
+            value="Back To Case Studies"
+            icon={<CgArrowLongLeft />}
+          />
         </div>
       </Layout>
     )
