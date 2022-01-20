@@ -16,6 +16,9 @@ class CaseStudyTemplate extends React.Component {
           <GatsbyImage alt="" image={caseStudy.image.gatsbyImageData} />
           <p>{caseStudy.story.internal.content}</p>
         </div>
+        <div>
+          <CaseStudyButton />
+        </div>
       </Layout>
     )
   }
