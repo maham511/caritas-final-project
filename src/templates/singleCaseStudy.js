@@ -4,6 +4,7 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 import Layout from '../components/layout'
 import get from 'lodash/get'
 import PropTypes from 'prop-types'
+import CaseStudyButton from '../components/caseStudyButton'
 class CaseStudyTemplate extends React.Component {
   render() {
     const caseStudy = get(this.props, 'data.contentfulCaseStudies')
