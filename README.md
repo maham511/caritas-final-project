@@ -7,6 +7,8 @@ Tech Lead - Mitch Lloyd
 
 Trainees - Terry Calderbank, Humail Khan, Mohammed Al-Abdulhamid, Maha Malik
 
+Project [site](https://caritas-education.netlify.app/) deployed on Netlify. Auto-deploys on new case study entry
+
 
 ## Project Brief
 
@@ -34,6 +36,10 @@ As a host, I want to have a website that is easy for learners to navigate, that 
 ### `npm run dev`
 
 Run the project locally with live reload in development mode.
+
+### `npm run eslint`
+
+Run this linting command before every Pull Request
 
 ### `npm run build`
 
