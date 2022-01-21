@@ -28,7 +28,7 @@ class CaseStudyTemplate extends React.Component {
         <div>
           <Button
             onClick={handleClick}
-            value="Back To Case Studies"
+            text="Back To Case Studies"
             icon={<CgArrowLongLeft />}
           />
         </div>

@@ -23,7 +23,7 @@ class CaseStudyIndex extends React.Component {
 
         <Button
           onClick={handleClick}
-          value="Back To Home Page"
+          text="Back To Home Page"
           icon={<CgArrowLongLeft />}
         />
       </Layout>

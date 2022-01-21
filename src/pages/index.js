@@ -6,24 +6,26 @@ import Home from '../components/home'
 import Button from '../components/button'
 import { navigate } from 'gatsby'
 import { CgArrowLongRight } from 'react-icons/cg'
-const RootIndex = () => {
-  function handleClick(event) {
-    event.preventDefault()
-    {
-      navigate('/caseStudies')
+class RootIndex extends React.Component {
+  render() {
+    function handleClick(event) {
+      event.preventDefault()
+      {
+        navigate('/caseStudies')
+      }
     }
-  }
 
-  return (
-    <Layout location={location}>
-      <Home />
-      <Button
-        onClick={handleClick}
-        value="Case Studies"
-        icon={<CgArrowLongRight />}
-      />
-    </Layout>
-  )
+    return (
+      <Layout location={this.props.location}>
+        <Home />
+        <Button
+          onClick={handleClick}
+          text="Case Studies"
+          icon={<CgArrowLongRight />}
+        />
+      </Layout>
+    )
+  }
 }
 
 RootIndex.propTypes = {

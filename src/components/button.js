@@ -1,19 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Button = ({ value, icon, onClick }) => {
+const Button = ({ text, icon, onClick }) => {
   return (
     <div>
       <button onClick={(event) => onClick(event)}>
         {icon}
-        {value}
+        {text}
       </button>
     </div>
   )
 }
 
 Button.propTypes = {
-  value: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
   icon: PropTypes.object,
 }
