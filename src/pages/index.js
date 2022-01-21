@@ -2,13 +2,27 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import Layout from '../components/layout'
-
 import Home from '../components/home'
+import Button from '../components/button'
+import { navigate } from 'gatsby'
+import { CgArrowLongRight } from 'react-icons/cg'
 class RootIndex extends React.Component {
   render() {
+    function handleClick(event) {
+      event.preventDefault()
+      {
+        navigate('/caseStudies')
+      }
+    }
+
     return (
       <Layout location={this.props.location}>
         <Home />
+        <Button
+          onClick={handleClick}
+          text="Case Studies"
+          icon={<CgArrowLongRight />}
+        />
       </Layout>
     )
   }
