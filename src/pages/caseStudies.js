@@ -20,7 +20,6 @@ class CaseStudyIndex extends React.Component {
     return (
       <Layout location={this.props.location}>
         <CaseStudyPreview caseStudies={caseStudies} />
-
         <Button
           onClick={handleClick}
           text="Back To Home Page"
