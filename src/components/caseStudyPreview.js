@@ -14,7 +14,7 @@ const CaseStudyPreview = ({ caseStudies }) => {
         <h1 className="text-center text-2xl pt-5 p-10 md:text-4xl ">
           Our Case Studies
         </h1>
-        <ul className="grid grid-cols-1 p-2  sm:grid-cols-2 p-5 gap-4 md:grid-cols-3 gap-8 bg-gray-200">
+        <ul className="grid grid-cols-1 p-2 sm:grid-cols-2 p-5 gap-4 md:grid-cols-3 gap-8 bg-gray-200">
           {caseStudies.map((caseStudy) => {
             return (
               <li

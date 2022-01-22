@@ -5,11 +5,11 @@ const Button = ({ text, icon, onClick }) => {
   return (
     <div className="flex justify-center">
       <button
-        className="flex content-between bg-red-600 hover:bg-red-400 rounded text-sm mt-5 mb-5 m-0 sm:text-lg m-16 pt-5 pb-5 p-20 items-center text-white "
+        className="flex flex-col bg-red-600 hover:bg-red-400 rounded text-sm mt-5 mb-5 m-0 sm:text-lg m-16 pt-5 pb-5 p-20 items-center text-white "
         onClick={(event) => onClick(event)}
       >
-        {icon}
         {text}
+        {icon}
       </button>
     </div>
   )
