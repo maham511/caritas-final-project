@@ -19,19 +19,25 @@ class CaseStudyTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <div>
-          <h2>{caseStudy.title}</h2>
-          <h4>{caseStudy.name}</h4>
-          <GatsbyImage alt="" image={caseStudy.image.gatsbyImageData} />
-          <p>{caseStudy.story.internal.content}</p>
+        <div className="grid grid-cols-1 p-2 md:grid-cols-2 p-6 bg-gray-200">
+          <div className="order-1 col-span-1 mb-4 md:col-span-2 text-center text-4xl">
+            <h2>{caseStudy.name}</h2>
+          </div>
+          <div className="order-2 col-span-1">
+            <GatsbyImage alt="" image={caseStudy.image.gatsbyImageData} />
+          </div>
+          <div className="order-3 col-span-1 p-2 bg-red-600 text-white">
+            <h2>{caseStudy.title}</h2>
+          </div>
+          <div className="order-4 col-span-1 md:col-span-2 grow text-justify p-2 pt-6">
+            <p>{caseStudy.story.internal.content}</p>
+          </div>
         </div>
-        <div>
-          <Button
-            onClick={handleClick}
-            text="Back To Case Studies"
-            icon={<CgArrowLongLeft />}
-          />
-        </div>
+        <Button
+          onClick={handleClick}
+          text="Back To Case Studies"
+          icon={<CgArrowLongLeft />}
+        />
       </Layout>
     )
   }
