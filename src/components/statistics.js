@@ -1,5 +1,5 @@
 import React from 'react'
-import statistics from '../../public/stats.png'
+import statistics from '../assets/Stats.png'
 
 const Statistics = () => {
   return (
