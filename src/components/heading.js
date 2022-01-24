@@ -1,16 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
-// import { logo } from ../assets/Caritas-logo.png
-// import { logo } from '../assets/Caritas-logo.png'
 import logo from '../assets/Caritas-logo.png'
-
-
-console.log(logo);
 
 const Heading = () => (
   <div>
     <Link to="/">
-      <img src={logo} className='h-32 p-4'></img>
+      <img src={logo} className='w-36 md:w-64 p-4'></img>
     </Link>
   </div>
 )
