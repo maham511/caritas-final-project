@@ -8,7 +8,6 @@ import Statistics from './statistics'
 const Home = () => (
   <Container>
     <div>
-      <h1>This is the home page</h1>
       <AboutUs />
       <Services />
       <VideoSection />
