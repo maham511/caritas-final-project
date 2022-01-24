@@ -35,7 +35,7 @@ As a host, I want to have a website that is easy for learners to navigate, that 
 
 ### `npm run dev`
 
-Run the project locally with live reload in development mode.
+Run the project locally with live reload in development mode. Runs on localhost:8000
 
 ### `npm run eslint`
 
