@@ -1,13 +1,13 @@
 import React from 'react'
-import statistics from '../assets/Stats.png'
+import statsImage from '../assets/Stats.png'
 
 const Statistics = () => {
   return (
     <div className="m-4">
       <img
         className="m-auto w-5/6"
-        src={statistics}
-        alt="statisticsData2019To2021"
+        src={statsImage}
+        alt="Statistics for student results year 2019 to 2020"
       />
     </div>
   )
