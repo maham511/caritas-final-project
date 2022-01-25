@@ -3,11 +3,26 @@ import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import Layout from '../components/layout'
 import Home from '../components/home'
+import Button from '../components/button'
+import { navigate } from 'gatsby'
+import { FaRegArrowAltCircleRight } from 'react-icons/fa'
+
 class RootIndex extends React.Component {
   render() {
+    function handleClick(event) {
+      event.preventDefault()
+      {
+        navigate('/caseStudies')
+      }
+    }
     return (
       <Layout location={this.props.location}>
         <Home />
+        <Button
+          onClick={handleClick}
+          text="See our success stories"
+          icon={<FaRegArrowAltCircleRight />}
+        />
       </Layout>
     )
   }

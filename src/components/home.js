@@ -3,7 +3,6 @@ import AboutUs from './aboutUs'
 import Services from './services'
 import VideoSection from './videoSection'
 import Statistics from './statistics'
-import SuccessStories from './successStories'
 
 const Home = () => (
   <>
@@ -11,7 +10,6 @@ const Home = () => (
     <Services />
     <VideoSection />
     <Statistics />
-    <SuccessStories />
   </>
 )
 
