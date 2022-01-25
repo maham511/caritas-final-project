@@ -15,6 +15,7 @@ class CaseStudyIndex extends React.Component {
         navigate('/')
       }
     }
+    
     const caseStudies = get(this, 'props.data.allContentfulCaseStudies.nodes')
 
     return (

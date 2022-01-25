@@ -15,6 +15,7 @@ class CaseStudyTemplate extends React.Component {
         navigate('/caseStudies/')
       }
     }
+    
     const caseStudy = get(this.props, 'data.contentfulCaseStudies')
 
     return (
