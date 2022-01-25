@@ -7,6 +7,7 @@ import Button from '../components/button'
 import { navigate } from 'gatsby'
 import PropTypes from 'prop-types'
 import { FaRegArrowAltCircleLeft } from 'react-icons/fa'
+
 class CaseStudyIndex extends React.Component {
   render() {
     function handleClick(event) {
