@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import logo from '../assets/Caritas-logo.png'
+// import logo from '../assets/Caritas-logo.png'
+import logo from '../../assets/Caritas-logo.png'
+
 
 const Heading = () => (
   <div>
