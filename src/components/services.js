@@ -32,9 +32,7 @@ const Services = () => (
           for these qualifications.
         </li>
         <li className="border-2 m-6 p-4 col-span-1 text-base">
-          <span span className="font-bold text-large pr-1">
-            Well-being support:
-          </span>
+          <span className="font-bold text-large pr-1">Well-being support:</span>
           We offer referrals to other Caritas services and external
           organisations on a range of welfare issues, including housing,
           destitution, legal problems and mental health.
