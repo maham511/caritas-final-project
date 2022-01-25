@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from './button'
 import { navigate } from 'gatsby'
-import { CgArrowLongRight } from 'react-icons/cg'
+import { FaRegArrowAltCircleRight } from 'react-icons/fa'
 
 const SuccessStories = () => {
   function handleClick(event) {
@@ -15,7 +15,7 @@ const SuccessStories = () => {
       <Button
         onClick={handleClick}
         text="See our success stories"
-        icon={<CgArrowLongRight />}
+        icon={<FaRegArrowAltCircleRight />}
       />
     </div>
   )

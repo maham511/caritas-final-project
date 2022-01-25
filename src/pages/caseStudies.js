@@ -6,7 +6,7 @@ import CaseStudyPreview from '../components/caseStudyPreview'
 import Button from '../components/button'
 import { navigate } from 'gatsby'
 import PropTypes from 'prop-types'
-import { CgArrowLongLeft } from 'react-icons/cg'
+import { FaRegArrowAltCircleLeft } from 'react-icons/fa'
 class CaseStudyIndex extends React.Component {
   render() {
     function handleClick(event) {
@@ -15,7 +15,7 @@ class CaseStudyIndex extends React.Component {
         navigate('/')
       }
     }
-    
+
     const caseStudies = get(this, 'props.data.allContentfulCaseStudies.nodes')
 
     return (
@@ -24,7 +24,7 @@ class CaseStudyIndex extends React.Component {
         <Button
           onClick={handleClick}
           text="Back To Home Page"
-          icon={<CgArrowLongLeft />}
+          icon={<FaRegArrowAltCircleLeft />}
         />
       </Layout>
     )
