@@ -6,7 +6,8 @@ import get from 'lodash/get'
 import PropTypes from 'prop-types'
 import Button from '../components/button'
 import { navigate } from 'gatsby'
-import { CgArrowLongLeft } from 'react-icons/cg'
+import { FaRegArrowAltCircleLeft } from 'react-icons/fa'
+
 class CaseStudyTemplate extends React.Component {
   render() {
     function handleClick(event) {
@@ -15,7 +16,7 @@ class CaseStudyTemplate extends React.Component {
         navigate('/caseStudies/')
       }
     }
-    
+
     const caseStudy = get(this.props, 'data.contentfulCaseStudies')
 
     return (
@@ -37,7 +38,7 @@ class CaseStudyTemplate extends React.Component {
         <Button
           onClick={handleClick}
           text="Back To Case Studies"
-          icon={<CgArrowLongLeft />}
+          icon={<FaRegArrowAltCircleLeft />}
         />
       </Layout>
     )

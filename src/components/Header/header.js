@@ -3,7 +3,7 @@ import Heading from './heading'
 import Navigation from './navigation'
 
 const Header = () => (
-  <header>
+  <header className="flex flex-col items-center w-full px-6 md:flex-row md:items-end md:place-content-between">
     <Heading />
     <Navigation />
   </header>

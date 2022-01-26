@@ -5,7 +5,8 @@ import Layout from '../components/layout'
 import Home from '../components/home'
 import Button from '../components/button'
 import { navigate } from 'gatsby'
-import { CgArrowLongRight } from 'react-icons/cg'
+import { FaRegArrowAltCircleRight } from 'react-icons/fa'
+
 class RootIndex extends React.Component {
   render() {
     function handleClick(event) {
@@ -14,14 +15,13 @@ class RootIndex extends React.Component {
         navigate('/caseStudies')
       }
     }
-
     return (
       <Layout location={this.props.location}>
         <Home />
         <Button
           onClick={handleClick}
-          text="Case Studies"
-          icon={<CgArrowLongRight />}
+          text="See our success stories"
+          icon={<FaRegArrowAltCircleRight />}
         />
       </Layout>
     )
