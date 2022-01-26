@@ -6,7 +6,7 @@ const VideoSection = () => {
       <div className="flex-1 max-w-3xl m-auto">
         <div className="aspect-w-16 aspect-h-9">
           <iframe
-            className="m-auto p-4"
+            className="p-4"
             src="https://www.youtube.com/embed/-YoFF3f1uJg"
             title="YouTube video player"
             frameBorder="0"
