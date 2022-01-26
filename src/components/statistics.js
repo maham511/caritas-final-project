@@ -3,12 +3,19 @@ import statsImage from '../assets/Stats.png'
 
 const Statistics = () => {
   return (
-    <div className="m-4">
-      <img
-        className="m-auto w-5/6"
-        src={statsImage}
-        alt="Statistics for student results year 2019 to 2020"
-      />
+    <div className="flex items-center justify center m-2">
+      <div className="flex-1 max-w-3xl m-auto">
+        <h2 className="text-center text-xl mt-6 p-4 w-full md:text-4xl">
+          2019-20 Academic year
+        </h2>
+        <div className="aspect-w-16 aspect-h-8">
+          <img
+            className="m-auto p-4"
+            src={statsImage}
+            alt="Statistics for student results year 2019 to 2020"
+          />
+        </div>
+      </div>
     </div>
   )
 }
