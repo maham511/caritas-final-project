@@ -2,7 +2,7 @@ import React from 'react'
 
 const AboutUs = () => (
   <div className="m-2 bg-red-600 p-4 text-white">
-    <div className="bg-red ">
+    <div className="bg-red">
       <h2 className="text-center text-4xl mt-6 bg-red">
         Caritas Refugee Education
       </h2>
@@ -11,7 +11,7 @@ const AboutUs = () => (
         getting a qualification with Caritas and now succeeding in my university
         course.” Musaab – former student
       </p>
-      <p className=" p-4">
+      <p className="p-4">
         Caritas Refugee Education works alongside refugees and asylum seekers in
         order to assist in their journey of wellbeing and integration. We do
         this by providing high quality language lessons, delivered in a
