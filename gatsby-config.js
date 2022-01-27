@@ -48,6 +48,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-image',
     'gatsby-plugin-postcss',
+    `gatsby-plugin-mailgo`,
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
