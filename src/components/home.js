@@ -3,6 +3,7 @@ import AboutUs from './aboutUs'
 import Services from './services'
 import VideoSection from './videoSection'
 import Statistics from './statistics'
+import Carousel from './carousel'
 
 const Home = () => (
   <>
@@ -10,6 +11,7 @@ const Home = () => (
     <Services />
     <VideoSection />
     <Statistics />
+    <Carousel />
   </>
 )
 

@@ -1,19 +1,39 @@
 import React from 'react'
+import { useState } from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import { GatsbyImage } from 'gatsby-plugin-image'
+import Button from './button'
+
+let count = 0
 
 const Carousel = ({ data }) => {
+  const [currentIndex, setCurrentIndex] = useState(0)
   const allImages = data.allContentfulImages.nodes
+  console.log(allImages)
+  const handleOnNextClick = () => {
+    count = (count + 1) % allImages.length
+    setCurrentIndex(count)
+  }
+
+  const handleOnPreviousClick = () => {
+    const imagesLength = allImages.length
+    count = (currentIndex + imagesLength - 1) % imagesLength
+    setCurrentIndex(count)
+  }
+
   return (
     <div>
-      {allImages.map((node) => (
-        <ul key={node.id}>
-          <li>
-            <GatsbyImage image={node.image.gatsbyImageData} alt={node.alt} />
-          </li>
-        </ul>
-      ))}
+      <div className="aspect-w-16 aspect-h-9">
+        <GatsbyImage
+          image={allImages[currentIndex].image.gatsbyImageData}
+          alt={allImages[currentIndex].alt}
+        />
+      </div>
+      <div className="flex justify-between items-center">
+        <Button text="Previous" onClick={handleOnPreviousClick} />
+        <Button text="Next" onClick={handleOnNextClick} />
+      </div>
     </div>
   )
 }
@@ -42,8 +62,5 @@ export default function MyCarousel(props) {
 }
 
 Carousel.propTypes = {
-  location: PropTypes.shape({
-    pathname: PropTypes.string.isRequired,
-  }).isRequired,
-  data: PropTypes.node.isRequired,
+  data: PropTypes.any.isRequired,
 }
