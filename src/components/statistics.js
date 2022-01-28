@@ -5,7 +5,7 @@ const Statistics = () => {
   return (
     <div className="flex m-2">
       <div className="flex-1 max-w-4xl m-auto">
-        <h2 className="text-center text-xl mt-6 p-4 w-full md:text-4xl">
+        <h2 className="text-center mt-6 p-4 w-full">
           2019-20 Academic year
         </h2>
         <div className="aspect-w-16 aspect-h-8">

@@ -14,18 +14,17 @@ const CaseStudyPreview = ({ caseStudies }) => {
       <ul className="grid grid-cols-1 p-2 sm:grid-cols-2 p-2 gap-4 md:grid-cols-3 gap-8 bg-gray-200">
         {caseStudies.map((caseStudy) => {
           return (
-            <li className="flex bg-white" key={caseStudy.id}>
+            <li className="flex bg-white rounded" key={caseStudy.id}>
               <Link
                 className="flex flex-col hover:opacity-70 transition ease-out duration-500 hover:shadow-2xl"
                 to={`/caseStudies/${caseStudy.slug}`}
               >
                 <GatsbyImage alt="" image={caseStudy.image.gatsbyImageData} />
-                <h2 className="flex-1 text-center mt-5 m-5">
+                <h2 className="flex-1 text-center text-base mt-5 m-5">
                   {caseStudy.title}
                 </h2>
                 <h4 className="text-center p-5 font-bold">{caseStudy.name}</h4>
-
-                <p className="grow text-justify p-5 m-5 border border-black">
+                <p className="grow p-5 m-5 border border-gray-400 rounded">
                   {
                     caseStudy.childContentfulCaseStudiesStoryTextNode
                       .childMarkdownRemark.excerpt
