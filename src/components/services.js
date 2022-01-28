@@ -8,7 +8,7 @@ const Services = () => (
       </h2>
     </div>
     <div className="w-full">
-      <ul className="grid grid-cols-1 sm:grid-cols-2 list-disc">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 list-disc pl-4">
         <li className="border-2 m-6 p-4 col-span-1 text-base">
           <span className="font-bold text-large pr-1">Education:</span>English
           language is the main barrier to young refugees entering training,
