@@ -3,7 +3,7 @@ import statsImage from '../assets/Stats.png'
 
 const Statistics = () => {
   return (
-    <div className="flex m-2">
+    <div className="flex m-2 bg-gray-200">
       <div className="flex-1 max-w-4xl m-auto">
         <h2 className="text-center mt-6 p-4 w-full">
           2019-20 Academic year

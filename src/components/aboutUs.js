@@ -6,11 +6,14 @@ const AboutUs = () => (
       <h1 className="text-center text-3xl md:text-5xl mt-6 bg-red text-white">
         Caritas Refugee Education
       </h1>
-      <p className="p-4 bg-white m-6 font-bold">
-        ”I went from being destitute and living in emergency accommodation, to
-        getting a qualification with Caritas and now succeeding in my university
-        course.” Musaab – former student
-      </p>
+      <figure className="p-4 bg-white m-6 font-bold">
+        <blockquote className="italic">
+            ”I went from being destitute and living in emergency accommodation,
+            to getting a qualification with Caritas and now succeeding in my
+            university course.”
+        </blockquote>
+        <figcaption>— Musaab, former student</figcaption>
+      </figure>
       <p className="p-4 text-white">
         Caritas Refugee Education works alongside refugees and asylum seekers in
         order to assist in their journey of wellbeing and integration. We do
