@@ -1,5 +1,5 @@
 import React from 'react'
-import statsImage from '../assets/Stats.png'
+import statsImage from '../../assets/Stats.png'
 
 const Statistics = () => {
   return (
