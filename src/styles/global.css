@@ -5,5 +5,10 @@
 @tailwind utilities;
 
 body {
+  @apply text-gray-600;
   font-family: 'Lato', sans-serif;
+}
+
+h2{
+  @apply text-2xl md:text-4xl
 }

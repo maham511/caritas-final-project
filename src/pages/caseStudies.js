@@ -24,7 +24,7 @@ class CaseStudyIndex extends React.Component {
         <CaseStudyPreview caseStudies={caseStudies} />
         <Button
           onClick={handleClick}
-          text="Back To Home Page"
+          text="Back To Home"
           icon={<FaRegArrowAltCircleLeft />}
         />
       </Layout>
