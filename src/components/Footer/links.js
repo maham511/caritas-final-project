@@ -12,10 +12,10 @@ const Links = () => {
           <FaEnvelope className="h-6 w-6" />
         </a>
       </p>
-      <Link to="https://twitter.com/CaritasSalford">
+      <Link to="https://twitter.com/CaritasSalford" target="_blank">
         <FaTwitterSquare className="h-6 w-6" />
       </Link>
-      <Link to="https://www.facebook.com/CaritasSalford/">
+      <Link to="https://www.facebook.com/CaritasSalford/" target="_blank">
         <FaFacebookSquare className="h-6 w-6" />
       </Link>
     </div>
