@@ -11,7 +11,7 @@ const CaseStudyPreview = ({ caseStudies }) => {
       <h1 className="text-center text-2xl pt-5 p-10 md:text-4xl">
         Our Case Studies
       </h1>
-      <ul className="grid grid-cols-1 p-2 sm:grid-cols-2 p-2 gap-4 md:grid-cols-3 gap-8 bg-gray-200">
+      <ul className="grid grid-cols-1 p-2 sm:grid-cols-2 p-2 gap-4 md:grid-cols-3 gap-8 bg-gray-200 rounded">
         {caseStudies.map((caseStudy) => {
           return (
             <li className="flex bg-white rounded" key={caseStudy.id}>
@@ -24,12 +24,15 @@ const CaseStudyPreview = ({ caseStudies }) => {
                   {caseStudy.title}
                 </h2>
                 <h4 className="text-center p-5 font-bold">{caseStudy.name}</h4>
-                <p className="grow p-5 m-5 border border-gray-400 rounded">
-                  {
-                    caseStudy.childContentfulCaseStudiesStoryTextNode
-                      .childMarkdownRemark.excerpt
-                  }
-                </p>
+                <div className="grow p-5 m-5 border border-gray-400 rounded">
+                  <p>
+                    {
+                      caseStudy.childContentfulCaseStudiesStoryTextNode
+                        .childMarkdownRemark.excerpt
+                    }
+                  </p>
+                  <span className="mt-2">Read More</span>
+                </div>
               </Link>
             </li>
           )
