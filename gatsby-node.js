@@ -20,14 +20,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     `
   );
 
-  paginate({
-    createPage,
-    items: result.data.allContentfulCaseStudies.nodes,
-    itemsPerPage: 1,
-    pathPrefix: '/',
-    component: path.resolve(`/caseStudies/${caseStudy.slug}/`),
-  });
-
   if (result.errors) {
     reporter.panicOnBuild(
       `There was an error loading your Contentful posts`,
