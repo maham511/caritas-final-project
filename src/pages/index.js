@@ -1,9 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import Home from '../components/home'
-import Button from '../components/button'
+import Button from '../components/Button'
 import { navigate } from 'gatsby'
 import { FaRegArrowAltCircleRight } from 'react-icons/fa'
 

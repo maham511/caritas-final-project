@@ -1,10 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import get from 'lodash/get'
 import PropTypes from 'prop-types'
-import Button from '../components/button'
+import Button from '../components/Button'
 import { navigate } from 'gatsby'
 import { FaRegArrowAltCircleLeft } from 'react-icons/fa'
 
