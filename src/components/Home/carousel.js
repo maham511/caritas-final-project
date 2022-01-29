@@ -1,38 +1,68 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import { GatsbyImage } from 'gatsby-plugin-image'
-import Button from './button'
+import Button from '../Button'
 
 let count = 0
+let slideInterval
 
 const Carousel = ({ data }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const slideRef = useRef()
+
+  const removeAnimation = () => {
+    slideRef.current.classList.remove('fade-anim')
+  }
+
+  useEffect(() => {
+    slideRef.current.addEventListener('animationEnd', removeAnimation)
+    slideRef.current.addEventListener('mouseenter', pauseSlider)
+    slideRef.current.addEventListener('mouseleave', startSlider)
+
+    startSlider()
+
+    return () => {
+      pauseSlider()
+    }
+  }, [])
+
+  const startSlider = () => {
+    slideInterval = setInterval(() => {
+      handleOnNextClick()
+    }, 3000)
+  }
+
+  const pauseSlider = () => {
+    clearInterval(slideInterval)
+  }
+
   const allImages = data.allContentfulImages.nodes
-  console.log(allImages)
   const handleOnNextClick = () => {
     count = (count + 1) % allImages.length
     setCurrentIndex(count)
+    slideRef.current.classList.add('fade-anim')
   }
 
   const handleOnPreviousClick = () => {
     const imagesLength = allImages.length
     count = (currentIndex + imagesLength - 1) % imagesLength
     setCurrentIndex(count)
+    slideRef.current.classList.add('fade-anim')
   }
 
   return (
-    <div>
+    <div ref={slideRef} className="m-2 select-none">
       <div className="aspect-w-16 aspect-h-9">
         <GatsbyImage
           image={allImages[currentIndex].image.gatsbyImageData}
           alt={allImages[currentIndex].alt}
         />
-      </div>
-      <div className="flex justify-between items-center">
-        <Button text="Previous" onClick={handleOnPreviousClick} />
-        <Button text="Next" onClick={handleOnNextClick} />
+
+        <div className="absolute w-full top-1/2 transform -translate-y-1/2 px-3 flex justify-between items-center">
+          <Button text="Previous" onClick={handleOnPreviousClick} />
+          <Button text="Next" onClick={handleOnNextClick} />
+        </div>
       </div>
     </div>
   )
