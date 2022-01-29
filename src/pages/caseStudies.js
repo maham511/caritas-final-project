@@ -1,9 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import get from 'lodash/get'
-import CaseStudyPreview from '../components/caseStudyPreview'
-import Button from '../components/button'
+import CaseStudyPreview from '../components/CaseStudyPreview'
+import Button from '../components/Button'
 import { navigate } from 'gatsby'
 import PropTypes from 'prop-types'
 import { FaRegArrowAltCircleLeft } from 'react-icons/fa'
@@ -24,7 +24,7 @@ class CaseStudyIndex extends React.Component {
         <CaseStudyPreview caseStudies={caseStudies} />
         <Button
           onClick={handleClick}
-          text="Back To Home Page"
+          text="Back To Home"
           icon={<FaRegArrowAltCircleLeft />}
         />
       </Layout>
