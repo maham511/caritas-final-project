@@ -3,7 +3,7 @@ import React from 'react'
 const AboutUs = () => (
   <div className="m-2 bg-red-600 p-4">
     <div className="bg-red">
-      <h1 className="text-center text-3xl md:text-5xl mt-6 bg-red text-white">
+      <h1 className="text-center text-3xl md:text-5xl mt-6 text-white">
         Caritas Refugee Education
       </h1>
       <figure className="p-4 bg-white m-6 font-bold rounded">
