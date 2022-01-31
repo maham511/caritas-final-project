@@ -54,20 +54,19 @@ const Carousel = ({ data }) => {
 
   return (
     <div ref={slideRef} className="m-2 select-none">
-      <div className="aspect-w-16 aspect-h-9">
+      <div className="relative">
         <GatsbyImage
           image={allImages[currentIndex].image.gatsbyImageData}
           alt={allImages[currentIndex].alt}
         />
-
         <div className="absolute w-full top-1/2 transform -translate-y-1/2 px-3 flex justify-between items-center">
           <Button
             onClick={handleOnPreviousClick}
-            icon={<RiArrowLeftSLine size={40} color="white" />}
+            icon={<RiArrowLeftSLine size={80} color="white" />}
           />
           <Button
             onClick={handleOnNextClick}
-            icon={<RiArrowRightSLine size={40} color="white" />}
+            icon={<RiArrowRightSLine size={80} color="white" />}
           />
         </div>
       </div>
