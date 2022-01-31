@@ -23,9 +23,13 @@ class CaseStudyIndex extends React.Component {
       <Layout location={this.props.location}>
         <CaseStudyPreview caseStudies={caseStudies} />
         <Button
+          className={
+            'flex flex-col bg-red-600 hover:bg-red-400 rounded text-sm mt-5 mb-5 m-0 transition ease-out duration-500 hover:shadow-2xl md:text-lg pt-5 pb-4 p-20 items-center text-white uppercase'
+          }
           onClick={handleClick}
           text="Back To Home"
           icon={<FaRegArrowAltCircleLeft />}
+          type={'button'}
         />
       </Layout>
     )

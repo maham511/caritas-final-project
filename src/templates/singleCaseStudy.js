@@ -29,16 +29,20 @@ class CaseStudyTemplate extends React.Component {
             <GatsbyImage alt="" image={caseStudy.image.gatsbyImageData} />
           </div>
           <div className="order-3 col-span-1 p-4 bg-red-600 text-white">
-            <h2 className='text-xl md:text-3xl'>{caseStudy.title}</h2>
+            <h2 className="text-xl md:text-3xl">{caseStudy.title}</h2>
           </div>
           <div className="order-4 col-span-1 md:col-span-2 grow text-justify p-2 pt-6">
             <p>{caseStudy.story.internal.content}</p>
           </div>
         </div>
         <Button
+          className={
+            'flex flex-col bg-red-600 hover:bg-red-400 rounded text-sm mt-5 mb-5 m-0 transition ease-out duration-500 hover:shadow-2xl md:text-lg pt-5 pb-4 p-20 items-center text-white uppercase'
+          }
           onClick={handleClick}
           text="Back To Case Studies"
           icon={<FaRegArrowAltCircleLeft />}
+          type={'button'}
         />
       </Layout>
     )
