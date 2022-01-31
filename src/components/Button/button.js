@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const Button = ({ text, icon, onClick, className, type }) => {
   return (
-    <div className="flex justify-center">
+    <div data-testid="main-button" className="flex justify-center">
       <button
         className={className}
         onClick={(event) => onClick(event)}

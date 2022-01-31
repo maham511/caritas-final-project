@@ -1,4 +1,4 @@
-/* eslint-disable */
+"/* eslint-disable */"
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
