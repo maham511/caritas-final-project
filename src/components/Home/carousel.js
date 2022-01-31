@@ -3,6 +3,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import Button from '../Button'
+import { RiArrowLeftSLine, RiArrowRightSLine } from 'react-icons/ri'
 
 let count = 0
 let slideInterval
@@ -53,15 +54,20 @@ const Carousel = ({ data }) => {
 
   return (
     <div ref={slideRef} className="m-2 select-none">
-      <div className="aspect-w-16 aspect-h-9">
+      <div className="relative">
         <GatsbyImage
           image={allImages[currentIndex].image.gatsbyImageData}
           alt={allImages[currentIndex].alt}
         />
-
         <div className="absolute w-full top-1/2 transform -translate-y-1/2 px-3 flex justify-between items-center">
-          <Button text="Previous" onClick={handleOnPreviousClick} />
-          <Button text="Next" onClick={handleOnNextClick} />
+          <Button
+            onClick={handleOnPreviousClick}
+            icon={<RiArrowLeftSLine size={80} color="white" />}
+          />
+          <Button
+            onClick={handleOnNextClick}
+            icon={<RiArrowRightSLine size={80} color="white" />}
+          />
         </div>
       </div>
     </div>
