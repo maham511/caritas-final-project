@@ -7,16 +7,16 @@ const CaseStudyPreview = ({ caseStudies }) => {
   if (!caseStudies) return null
   if (!Array.isArray(caseStudies)) return null
   return (
-    <div className="bg-dark-gray p-2 m-2">
-      <h1 className="text-center text-2xl pt-5 p-10 md:text-4xl text-white">
+    <div className="p-2 m-2">
+      <h1 className="text-center text-2xl pt-5 p-10 md:text-4xl">
         Our Case Studies
       </h1>
-      <ul className="grid grid-cols-1 p-2 sm:grid-cols-2 p-2 gap-4 md:grid-cols-3 gap-8 bg-dark-gray rounded">
+      <ul className="grid grid-cols-1 p-2 sm:grid-cols-2 p-2 gap-4 md:grid-cols-3 gap-8 bg-gray-200 rounded">
         {caseStudies.map((caseStudy) => {
           return (
             <li className="flex bg-white rounded" key={caseStudy.id}>
               <Link
-                className="flex flex-col hover:text-textOnhover transition ease-out duration-500 hover:shadow-2xl"
+                className="flex flex-col hover:text-OnHoverColor transition ease-out duration-500 hover:shadow-2xl"
                 to={`/caseStudies/${caseStudy.slug}`}
               >
                 <GatsbyImage

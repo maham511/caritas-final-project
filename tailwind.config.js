@@ -8,7 +8,7 @@ module.exports = {
       },
       colors: {
         'dark-gray': '#4a4f53',
-        textOnhover: '#2563eb',
+        OnHoverColor: '#2563eb',
       },
     },
   },
