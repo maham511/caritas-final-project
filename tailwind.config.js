@@ -7,7 +7,7 @@ module.exports = {
         Lato: ["'Lato', sans-serif"],
       },
       colors: {
-        'dark-grey': '#4a4f53',
+        'dark-gray': '#4a4f53',
         textOnhover: '#2563eb',
       },
     },
