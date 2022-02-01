@@ -52,6 +52,7 @@ export const pageQuery = graphql`
         title
         slug
         name
+        alt
         image {
           gatsbyImageData(
             layout: FULL_WIDTH

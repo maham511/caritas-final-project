@@ -19,7 +19,10 @@ const CaseStudyPreview = ({ caseStudies }) => {
                 className="flex flex-col hover:opacity-70 transition ease-out duration-500 hover:shadow-2xl"
                 to={`/caseStudies/${caseStudy.slug}`}
               >
-                <GatsbyImage alt="" image={caseStudy.image.gatsbyImageData} />
+                <GatsbyImage
+                  alt={caseStudy.alt}
+                  image={caseStudy.image.gatsbyImageData}
+                />
                 <h2 className="flex-1 text-center text-base mt-5 m-5">
                   {caseStudy.title}
                 </h2>
