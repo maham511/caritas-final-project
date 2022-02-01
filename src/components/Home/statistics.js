@@ -8,7 +8,7 @@ const Statistics = () => {
         <h2 className="text-center mt-6 p-4 w-full">Our Impact on Students</h2>
         <div className="flex flex-col md:flex-row justify-around">
           <div className="bg-white rounded m-2 p-4">
-            <div>
+            <div className="text-4xl font-extrabold">
               <p>87%</p>
             </div>
             <div>
@@ -18,7 +18,7 @@ const Statistics = () => {
             </div>
           </div>
           <div className="bg-white rounded m-2 p-4">
-            <div>
+            <div className="text-4xl font-extrabold">
               <p>85%</p>
             </div>
             <div>
@@ -29,7 +29,7 @@ const Statistics = () => {
             </div>
           </div>
           <div className="bg-white rounded m-2 p-4">
-            <div>
+            <div className="text-4xl font-extrabold">
               <p>90%</p>
             </div>
             <div>
