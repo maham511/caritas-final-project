@@ -18,7 +18,6 @@ class CaseStudyTemplate extends React.Component {
     }
 
     const caseStudy = get(this.props, 'data.contentfulCaseStudies')
-    console.log(caseStudy)
     return (
       <Layout location={this.props.location}>
         <div className="grid grid-cols-1 p-2 m-2 md:grid-cols-2 p-6 bg-gray-200">
