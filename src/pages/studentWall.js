@@ -64,9 +64,10 @@ export const pageQuery = graphql`
             height: 450
           )
         }
-        testimonial {
-          internal {
-            content
+        childContentfulStudentWallTestimonialTextNode {
+          childMarkdownRemark {
+            excerpt
+            html
           }
         }
       }

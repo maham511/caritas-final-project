@@ -24,7 +24,12 @@ const StudentPostPreview = ({ studentWallPosts }) => {
                 </h2>
 
                 <div className="grow items-stretch h-full p-2 m-2 border border-gray-400 rounded">
-                  <p>{wallPost.testimonial.internal.content}</p>
+                  <p>
+                    {
+                      wallPost.childContentfulStudentWallTestimonialTextNode
+                        .childMarkdownRemark.excerpt
+                    }
+                  </p>
                 </div>
                 <div className="flex w-full bg-red-600 rounded">
                   <div className="w-10 h-10 m-2">
