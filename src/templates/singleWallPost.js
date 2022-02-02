@@ -7,6 +7,7 @@ import PropTypes from 'prop-types'
 import Button from '../components/Button'
 import { navigate } from 'gatsby'
 import { FaRegArrowAltCircleLeft } from 'react-icons/fa'
+import { ImQuotesLeft, ImQuotesRight } from 'react-icons/im'
 
 class WallPostTemplate extends React.Component {
   render() {
@@ -21,26 +22,34 @@ class WallPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <div className="grid grid-cols-1 p-2 m-2 md:grid-cols-2 p-6 bg-gray-200 rounded-md">
-          <div className="order-1 col-span-1 mb-4 md:col-span-2 text-center py-4">
-            <h2>{wallPost.title}</h2>
-          </div>
-          <div className="order-2 col-span-1 justify-end">
+        <div className="grid grid-cols-2 p-2 m-2 sm:w-1/2 p-6 bg-gray-200 rounded-md self-center">
+          <div className="w-20 h-20 m-2">
             <GatsbyImage
+              className="rounded-full aspect-square border-4 border-red-600 col-start-1 col-end-2"
               alt={wallPost.alt}
               image={wallPost.image.gatsbyImageData}
             />
           </div>
-          <div className="order-3 col-span-1 p-4 border-8 border-double border-red-600">
-            <h2 className="text-xl md:text-3xl">{wallPost.name}</h2>
+          <div className="order-3 col-span-2 md:col-span-2 grow text-center p-2 pt-6 font-bolder font-black italic leading-loose self-center">
+            <div className="flex flex-col">
+              <ImQuotesLeft size={20} />
+              <div
+                dangerouslySetInnerHTML={{
+                  __html:
+                    wallPost.childContentfulStudentWallTestimonialTextNode
+                      .childMarkdownRemark.html,
+                }}
+              />
+              <ImQuotesRight size={20} className="self-end" />
+            </div>
           </div>
-          <div className="order-4 col-span-1 md:col-span-2 grow text-center p-2 pt-6 font-bold">
-            <p>{wallPost.testimonial.internal.content}</p>
+          <div className="order-4 col-start-2 col-end-2 row-start-4 p-4">
+            <p className="text-xl md:text-xl">— {wallPost.name}</p>
           </div>
         </div>
         <Button
           className={
-            'flex flex-row-reverse bg-red-600 hover:bg-red-400 rounded text-sm mt-5 mb-5 m-0 transition ease-out duration-500 hover:shadow-2xl md:text-lg pt-5 pb-4 p-20 items-center text-white uppercase'
+            'flex flex-row-reverse self-center bg-red-600 hover:bg-red-400 rounded text-sm mt-5 mb-5 m-0 transition ease-out duration-500 hover:shadow-2xl md:text-lg pt-5 pb-4 p-20 items-center text-white uppercase'
           }
           onClick={handleClick}
           text="Back to Wall Posts"
@@ -70,13 +79,13 @@ export const pageQuery = graphql`
         gatsbyImageData(
           layout: FULL_WIDTH
           placeholder: BLURRED
-          width: 424
-          height: 212
+          width: 450
+          height: 450
         )
       }
-      testimonial {
-        internal {
-          content
+      childContentfulStudentWallTestimonialTextNode {
+        childMarkdownRemark {
+          html
         }
       }
     }

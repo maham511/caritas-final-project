@@ -30,7 +30,7 @@ class CaseStudyTemplate extends React.Component {
           <div className="order-3 col-span-1 p-4 bg-red-600 text-white">
             <h2 className="text-xl md:text-3xl">{caseStudy.title}</h2>
           </div>
-          <div className="order-4 col-span-1 md:col-span-2 grow text-justify p-2 pt-6">
+          <div className="order-4 col-span-1 md:col-span-2 grow text-justify p-2 pt-6 leading-loose">
             <div
               dangerouslySetInnerHTML={{
                 __html:
