@@ -24,13 +24,19 @@ class CaseStudyTemplate extends React.Component {
           <div className="order-1 col-span-1 mb-4 md:col-span-2 text-center py-4">
             <h2>{caseStudy.name}</h2>
           </div>
-          <div className="order-2 col-span-1">
-            <GatsbyImage alt="" image={caseStudy.image.gatsbyImageData} />
+          <div className="order-2 col-span-1 rounded-t-md">
+            <GatsbyImage
+              className="rounded-t md:rounded-tl"
+              alt=""
+              image={caseStudy.image.gatsbyImageData}
+            />
           </div>
-          <div className="order-3 col-span-1 p-4 bg-red-600 text-white">
-            <h2 className="text-xl md:text-3xl">{caseStudy.title}</h2>
+          <div className="order-3 col-span-1 p-4 bg-red-600 text-white md:rounded-tr">
+            <h2 className="text-xl md:text-2xl text-center">
+              {caseStudy.title}
+            </h2>
           </div>
-          <div className="order-4 col-span-1 md:col-span-2 grow text-justify p-2 pt-6 leading-loose">
+          <div className="order-4 col-span-1 md:col-span-2 grow p-12 leading-loose bg-white rounded-b">
             <div
               dangerouslySetInnerHTML={{
                 __html:
@@ -42,11 +48,11 @@ class CaseStudyTemplate extends React.Component {
         </div>
         <Button
           className={
-            'flex flex-col bg-red-600 hover:bg-red-400 rounded text-sm mt-5 mb-5 m-0 transition ease-out duration-500 hover:shadow-2xl md:text-lg pt-5 pb-4 p-20 items-center text-white uppercase'
+            'flex flex-row-reverse self-center bg-red-600 rounded text-sm mt-5 mb-5 m-0 transition ease-out duration-500 hover:shadow-2xl md:text-lg pt-5 pb-4 p-20 items-center text-white hover:bg-transparent hover:text-red-600 hover:font-bold border-4 border-transparent hover:border-red-600 uppercase'
           }
           onClick={handleClick}
           text="Back To Case Studies"
-          icon={<FaRegArrowAltCircleLeft />}
+          icon={<FaRegArrowAltCircleLeft size={30} className="mr-5" />}
           type={'button'}
         />
       </Layout>
