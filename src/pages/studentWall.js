@@ -60,8 +60,8 @@ export const pageQuery = graphql`
           gatsbyImageData(
             layout: FULL_WIDTH
             placeholder: BLURRED
-            width: 20
-            height: 20
+            width: 450
+            height: 450
           )
         }
         testimonial {
