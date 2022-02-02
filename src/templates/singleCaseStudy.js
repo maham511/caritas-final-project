@@ -18,7 +18,6 @@ class CaseStudyTemplate extends React.Component {
     }
 
     const caseStudy = get(this.props, 'data.contentfulCaseStudies')
-
     return (
       <Layout location={this.props.location}>
         <div className="grid grid-cols-1 p-2 m-2 md:grid-cols-2 p-6 bg-gray-200">
@@ -32,7 +31,13 @@ class CaseStudyTemplate extends React.Component {
             <h2 className="text-xl md:text-3xl">{caseStudy.title}</h2>
           </div>
           <div className="order-4 col-span-1 md:col-span-2 grow text-justify p-2 pt-6">
-            <p>{caseStudy.story.internal.content}</p>
+            <div
+              dangerouslySetInnerHTML={{
+                __html:
+                  caseStudy.childContentfulCaseStudiesStoryTextNode
+                    .childMarkdownRemark.html,
+              }}
+            />
           </div>
         </div>
         <Button
@@ -71,9 +76,9 @@ export const pageQuery = graphql`
           height: 212
         )
       }
-      story {
-        internal {
-          content
+      childContentfulCaseStudiesStoryTextNode {
+        childMarkdownRemark {
+          html
         }
       }
     }
