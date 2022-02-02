@@ -47,7 +47,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   // Define a template for wall posts
-  const singleWallPost = path.resolve('./src/templates/singleWallPost.js')
+  const singleWallPost = path.resolve(
+    './src/components/StudentPostPreview/studentWallPost.js'
+  )
 
   const resultStudentWall = await graphql(
     `

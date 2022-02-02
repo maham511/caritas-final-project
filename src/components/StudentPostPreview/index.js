@@ -1,1 +1,1 @@
-export { default } from './studentPostPreview.js'
+export { default } from './studentWallPost.js'
