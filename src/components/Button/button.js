@@ -9,7 +9,7 @@ const Button = ({ text, icon, onClick, className, type }) => {
         onClick={(event) => onClick(event)}
         type={type}
       >
-        <span className="pb-1.5">{text}</span>
+        {text}
         {icon}
       </button>
     </div>

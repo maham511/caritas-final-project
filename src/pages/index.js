@@ -20,11 +20,11 @@ class RootIndex extends React.Component {
         <Home />
         <Button
           className={
-            'flex flex-col bg-red-600 hover:bg-red-400 rounded text-sm mt-5 mb-5 m-0 transition ease-out duration-500 hover:shadow-2xl md:text-lg pt-5 pb-4 p-20 items-center text-white uppercase'
+            'flex self-center bg-red-600 rounded text-sm mt-5 mb-5 m-0 transition ease-out duration-500 hover:shadow-2xl md:text-lg pt-5 pb-4 p-20 items-center text-white hover:bg-transparent hover:text-red-600 hover:font-bold border-4 border-transparent hover:border-red-600 uppercase'
           }
           onClick={handleClick}
           text="See our success stories"
-          icon={<FaRegArrowAltCircleRight />}
+          icon={<FaRegArrowAltCircleRight size={30} className="ml-5"/>}
           type={'button'}
         />
       </Layout>

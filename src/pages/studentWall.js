@@ -27,11 +27,12 @@ class StudentWallIndex extends React.Component {
         <StudentWallPost studentWallPosts={studentWallPosts} />
         <Button
           className={
-            'flex flex-row-reverse self-center bg-red-600 hover:bg-red-400 rounded text-sm mt-5 mb-5 m-0 transition ease-out duration-500 hover:shadow-2xl md:text-lg pt-5 pb-4 p-20 items-center text-white uppercase'
+            'flex flex-row-reverse self-center bg-red-600 rounded text-sm mt-5 mb-5 m-0 transition ease-out duration-500 hover:shadow-2xl md:text-lg pt-5 pb-4 p-20 items-center text-white hover:bg-transparent hover:text-red-600 hover:font-bold border-4 border-transparent hover:border-red-600 uppercase'
           }
           onClick={handleClick}
           icon={<FaRegArrowAltCircleLeft size={30} className="mr-5" />}
           text="Back To Home"
+          icon={<FaRegArrowAltCircleLeft size={30} className="mr-5" />}
           type={'button'}
         />
       </Layout>
