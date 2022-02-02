@@ -54,7 +54,7 @@ const Carousel = ({ data }) => {
 
   return (
     <div ref={slideRef} className="m-2 select-none">
-      <h2 className='text-center m-6 md:p-4'>Memories at Caritas</h2>
+      <h2 className='text-center m-6 md:p-4'>Our Highlights</h2>
       <div className="relative">
         <GatsbyImage
           image={allImages[currentIndex].image.gatsbyImageData}

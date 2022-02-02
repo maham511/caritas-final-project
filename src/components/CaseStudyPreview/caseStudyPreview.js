@@ -11,7 +11,7 @@ const CaseStudyPreview = ({ caseStudies }) => {
       <h1 className="text-center text-2xl pt-5 p-10 md:text-4xl">
         Our Case Studies
       </h1>
-      <ul className="grid grid-cols-1 p-2 sm:grid-cols-2 p-2 gap-4 md:grid-cols-3 gap-8 bg-gray-200 rounded">
+      <ul className="grid grid-cols-1 p-2 sm:grid-cols-2 p-4 gap-4 md:grid-cols-3 gap-8 bg-gray-200 rounded">
         {caseStudies.map((caseStudy) => {
           return (
             <li className="flex bg-white rounded" key={caseStudy.id}>
@@ -20,6 +20,7 @@ const CaseStudyPreview = ({ caseStudies }) => {
                 to={`/caseStudies/${caseStudy.slug}`}
               >
                 <GatsbyImage
+                  className="rounded-t"
                   alt={caseStudy.alt}
                   image={caseStudy.image.gatsbyImageData}
                 />
