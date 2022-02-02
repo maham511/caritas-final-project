@@ -2,11 +2,11 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import get from 'lodash/get'
-import StudentPostPreview from '../components/StudentPostPreview'
 import Button from '../components/Button'
 import { navigate } from 'gatsby'
 import PropTypes from 'prop-types'
 import { FaRegArrowAltCircleLeft } from 'react-icons/fa'
+import StudentWallPost from '../components/StudentWallPost'
 
 class StudentWallIndex extends React.Component {
   render() {
@@ -24,7 +24,7 @@ class StudentWallIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <StudentPostPreview studentWallPosts={studentWallPosts} />
+        <StudentWallPost studentWallPosts={studentWallPosts} />
         <Button
           className={
             'flex flex-row-reverse self-center bg-red-600 hover:bg-red-400 rounded text-sm mt-5 mb-5 m-0 transition ease-out duration-500 hover:shadow-2xl md:text-lg pt-5 pb-4 p-20 items-center text-white uppercase'
