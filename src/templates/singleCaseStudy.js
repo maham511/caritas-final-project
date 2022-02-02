@@ -52,7 +52,7 @@ class CaseStudyTemplate extends React.Component {
           }
           onClick={handleClick}
           text="Back To Case Studies"
-          icon={<FaRegArrowAltCircleLeft size={30} className="mr-5" />}
+          icon={<FaRegArrowAltCircleLeft size={30} className="mr-5"/>}
           type={'button'}
         />
       </Layout>

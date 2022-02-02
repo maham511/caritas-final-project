@@ -24,7 +24,7 @@ class RootIndex extends React.Component {
           }
           onClick={handleClick}
           text="See our success stories"
-          icon={<FaRegArrowAltCircleRight size={30} className="ml-5" />}
+          icon={<FaRegArrowAltCircleRight size={30} className="ml-5"/>}
           type={'button'}
         />
       </Layout>
