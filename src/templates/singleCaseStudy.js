@@ -7,6 +7,8 @@ import PropTypes from 'prop-types'
 import Button from '../components/Button'
 import { navigate } from 'gatsby'
 import { FaRegArrowAltCircleLeft } from 'react-icons/fa'
+import { Link } from 'gatsby'
+
 
 class CaseStudyTemplate extends React.Component {
   render() {
@@ -18,6 +20,11 @@ class CaseStudyTemplate extends React.Component {
     }
 
     const caseStudy = get(this.props, 'data.contentfulCaseStudies')
+    // Pagination added
+    const previous = get(this.props, 'data.previous')
+    const next = get(this.props, 'data.next')
+    // --------
+
     return (
       <Layout location={this.props.location}>
         <div className="grid grid-cols-1 p-2 m-2 md:grid-cols-2 p-6 bg-gray-200">
@@ -44,6 +51,28 @@ class CaseStudyTemplate extends React.Component {
                     .childMarkdownRemark.html,
               }}
             />
+            {/* Pagination added */}
+            {(previous || next) && (
+              <nav>
+                <ul className="flex text-base text-gray-600 uppercase text-center">
+                  {previous && (
+                    <li>
+                      <Link to={`/caseStudies/${previous.slug}`} rel="prev">
+                        ← {previous.title}
+                      </Link>
+                    </li>
+                  )}
+                  {next && (
+                    <li>
+                      <Link to={`/caseStudies/${next.slug}`} rel="next">
+                        {next.title} →
+                      </Link>
+                    </li>
+                  )}
+                </ul>
+              </nav>
+            )}
+            {/* ------------ */}
           </div>
         </div>
         <Button
@@ -52,7 +81,7 @@ class CaseStudyTemplate extends React.Component {
           }
           onClick={handleClick}
           text="Back To Case Studies"
-          icon={<FaRegArrowAltCircleLeft size={30} className="mr-5"/>}
+          icon={<FaRegArrowAltCircleLeft size={30} className="mr-5" />}
           type={'button'}
         />
       </Layout>
@@ -69,7 +98,11 @@ CaseStudyTemplate.propTypes = {
 export default CaseStudyTemplate
 
 export const pageQuery = graphql`
-  query contentfulCaseStudyBySlug($slug: String!) {
+  query contentfulCaseStudyBySlug(
+    $slug: String!
+    $previousPostSlug: String
+    $nextPostSlug: String
+  ) {
     contentfulCaseStudies(slug: { eq: $slug }) {
       slug
       title
@@ -87,6 +120,14 @@ export const pageQuery = graphql`
           html
         }
       }
+    }
+    previous: contentfulCaseStudies(slug: { eq: $previousPostSlug }) {
+      slug
+      title
+    }
+    next: contentfulCaseStudies(slug: { eq: $nextPostSlug }) {
+      slug
+      title
     }
   }
 `
