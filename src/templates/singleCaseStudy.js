@@ -9,7 +9,6 @@ import { navigate } from 'gatsby'
 import { FaRegArrowAltCircleLeft } from 'react-icons/fa'
 import { Link } from 'gatsby'
 
-
 class CaseStudyTemplate extends React.Component {
   render() {
     function handleClick(event) {
@@ -20,10 +19,8 @@ class CaseStudyTemplate extends React.Component {
     }
 
     const caseStudy = get(this.props, 'data.contentfulCaseStudies')
-    // Pagination added
     const previous = get(this.props, 'data.previous')
     const next = get(this.props, 'data.next')
-    // --------
 
     return (
       <Layout location={this.props.location}>
@@ -51,19 +48,18 @@ class CaseStudyTemplate extends React.Component {
                     .childMarkdownRemark.html,
               }}
             />
-            {/* Pagination added */}
             {(previous || next) && (
               <nav>
                 <ul className="flex flex-wrap justify-between text-sm md:text-base text-red-600 text-center">
                   {previous && (
-                    <li className="rounded mt-5 mb-5 m-0 transition ease-out duration-500 hover:shadow-2xl p-2 hover:bg-red-600 hover:text-white border-2 border-red-600 hover:border-transparent">
+                    <li className="rounded mt-5 mb-5 transition ease-out duration-500 p-2 hover:bg-red-600 hover:text-white border-2 border-red-600 hover:border-transparent">
                       <Link to={`/caseStudies/${previous.slug}`} rel="prev">
                         ← Previous
                       </Link>
                     </li>
                   )}
                   {next && (
-                    <li className="rounded mt-5 mb-5 m-0 transition ease-out duration-500 hover:shadow-2xl p-2 hover:bg-red-600 hover:text-white border-2 border-red-600 hover:border-transparent">
+                    <li className="rounded mt-5 mb-5 transition ease-out duration-500 p-2 hover:bg-red-600 hover:text-white border-2 border-red-600 hover:border-transparent">
                       <Link to={`/caseStudies/${next.slug}`} rel="next">
                         Next →
                       </Link>
@@ -72,12 +68,11 @@ class CaseStudyTemplate extends React.Component {
                 </ul>
               </nav>
             )}
-            {/* ------------ */}
           </div>
         </div>
         <Button
           className={
-            'flex flex-row-reverse self-center bg-red-600 rounded text-sm mt-5 mb-5 m-0 transition ease-out duration-500 hover:shadow-2xl md:text-lg pt-5 pb-4 p-20 items-center text-white hover:bg-transparent hover:text-red-600 hover:font-bold border-4 border-transparent hover:border-red-600 uppercase'
+            'flex flex-row-reverse self-center bg-red-600 rounded text-sm mt-5 mb-5 m-3 transition ease-out duration-500 hover:shadow-2xl md:text-lg pt-5 pb-4 p-20 items-center text-white hover:bg-transparent hover:text-red-600 hover:font-bold border-4 border-transparent hover:border-red-600 uppercase'
           }
           onClick={handleClick}
           text="Back To Case Studies"
