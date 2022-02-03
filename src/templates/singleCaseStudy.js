@@ -43,7 +43,7 @@ class CaseStudyTemplate extends React.Component {
               {caseStudy.title}
             </h2>
           </div>
-          <div className="order-4 col-span-1 md:col-span-2 grow p-12 leading-loose bg-white rounded-b">
+          <div className="order-4 col-span-1 md:col-span-2 grow p-4 md:p-12 leading-loose bg-white rounded-b">
             <div
               dangerouslySetInnerHTML={{
                 __html:
@@ -54,18 +54,18 @@ class CaseStudyTemplate extends React.Component {
             {/* Pagination added */}
             {(previous || next) && (
               <nav>
-                <ul className="flex justify-between text-sm md:text-base text-gray-600 text-center">
+                <ul className="flex flex-wrap justify-between text-sm md:text-base text-red-600 text-center">
                   {previous && (
-                    <li className="bg-white rounded mt-5 mb-5 m-0 transition ease-out duration-500 hover:shadow-2xl pt-5 pb-4 p-20 items-center hover:bg-red-600 hover:text-white border-4 border-red-600 hover:border-transparent">
+                    <li className="rounded mt-5 mb-5 m-0 transition ease-out duration-500 hover:shadow-2xl p-2 hover:bg-red-600 hover:text-white border-2 border-red-600 hover:border-transparent">
                       <Link to={`/caseStudies/${previous.slug}`} rel="prev">
-                        Previous
+                        ← Previous
                       </Link>
                     </li>
                   )}
                   {next && (
-                    <li className="bg-white rounded mt-5 mb-5 m-0 transition ease-out duration-500 hover:shadow-2xl pt-5 pb-4 p-20 items-center hover:bg-red-600 hover:text-white border-4 border-red-600 hover:border-transparent">
+                    <li className="rounded mt-5 mb-5 m-0 transition ease-out duration-500 hover:shadow-2xl p-2 hover:bg-red-600 hover:text-white border-2 border-red-600 hover:border-transparent">
                       <Link to={`/caseStudies/${next.slug}`} rel="next">
-                        Next
+                        Next →
                       </Link>
                     </li>
                   )}
