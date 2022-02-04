@@ -12,12 +12,12 @@ const StudentWallPost = ({ studentWallPosts }) => {
       <h1 className="text-center text-2xl pt-5 p-10 md:text-4xl">
         Student Wall
       </h1>
-      <ul className="grid grid-cols-1 p-2 sm:grid-cols-2 p-2 gap-4 md:grid-cols-3 gap-8 bg-gray-200 rounded">
+      <ul className="grid grid-cols-1 p-4 sm:grid-cols-2 p-2 gap-4 md:grid-cols-3 gap-8 bg-gray-200 rounded">
         {studentWallPosts.map((wallPost) => {
           return (
             <li
               className="flex flex-col
-             bg-white rounded hover:text-OnHoverColor hover:transition ease-out duration-500 hover:shadow-2xl
+             bg-white rounded hover:transition ease-out duration-500 hover:shadow-2xl
              hover:text-lg"
               key={wallPost.id}
             >
@@ -30,7 +30,7 @@ const StudentWallPost = ({ studentWallPosts }) => {
               </div>
               <div
                 className="flex flex-1 font-bolder font-black italic
-              bg-blend-darken leading-loose items-center hover:text-OnHoverColor transition ease-out duration-500"
+              bg-blend-darken leading-loose items-center transition ease-out duration-500"
               >
                 <div className="flex flex-col grow items-stretch p-2 m-2">
                   <ImQuotesLeft size={20} />
