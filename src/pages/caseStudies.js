@@ -21,7 +21,7 @@ class CaseStudyIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <CaseStudyPreview caseStudies={caseStudies} />
+        <CaseStudyPreview caseStudies={caseStudies.reverse()} />
         <Button
           className={
             'flex flex-row-reverse self-center bg-red-600 rounded text-sm mt-5 mb-5 m-3 transition ease-out duration-500 hover:shadow-2xl md:text-lg pt-5 pb-4 p-20 items-center text-white hover:bg-transparent hover:text-red-600 hover:font-bold border-4 border-transparent hover:border-red-600 uppercase'
