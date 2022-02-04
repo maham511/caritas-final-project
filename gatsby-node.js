@@ -36,8 +36,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   if (caseStudies.length > 0) {
     caseStudies.forEach((caseStudy, index) => {
-      const previousPostSlug = index === 0 ? null : caseStudies[index - 1].slug
-      const nextPostSlug =
+      const previousCaseStudySlug =
+        index === 0 ? null : caseStudies[index - 1].slug
+      const nextCaseStudySlug =
         index === caseStudies.length - 1 ? null : caseStudies[index + 1].slug
 
       createPage({
@@ -45,8 +46,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         component: singleCaseStudy,
         context: {
           slug: caseStudy.slug,
-          previousPostSlug,
-          nextPostSlug,
+          previousCaseStudySlug,
+          nextCaseStudySlug,
         },
       })
     })

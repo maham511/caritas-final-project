@@ -49,24 +49,22 @@ class CaseStudyTemplate extends React.Component {
               }}
             />
             {(previous || next) && (
-              <nav>
-                <ul className="flex flex-wrap justify-between text-sm md:text-base text-red-600 text-center">
-                  {previous && (
-                    <li className="rounded mt-5 mb-5 transition ease-out duration-500 p-2 hover:bg-red-600 hover:text-white border-2 border-red-600 hover:border-transparent">
-                      <Link to={`/caseStudies/${previous.slug}`} rel="prev">
-                        ← Previous
-                      </Link>
-                    </li>
-                  )}
-                  {next && (
-                    <li className="rounded mt-5 mb-5 transition ease-out duration-500 p-2 hover:bg-red-600 hover:text-white border-2 border-red-600 hover:border-transparent">
-                      <Link to={`/caseStudies/${next.slug}`} rel="next">
-                        Next →
-                      </Link>
-                    </li>
-                  )}
-                </ul>
-              </nav>
+              <ul className="flex flex-wrap justify-center text-sm md:text-base text-red-600 text-center">
+                {previous && (
+                  <li className="rounded mt-5 mb-5 transition ease-out duration-500 p-2 hover:bg-red-600 hover:text-white border-2 border-red-600 hover:border-transparent">
+                    <Link to={`/caseStudies/${previous.slug}`} rel="prev">
+                      ← Previous
+                    </Link>
+                  </li>
+                )}
+                {next && (
+                  <li className="rounded mt-5 mb-5 transition ease-out duration-500 p-2 hover:bg-red-600 hover:text-white border-2 border-red-600 hover:border-transparent">
+                    <Link to={`/caseStudies/${next.slug}`} rel="next">
+                      Next →
+                    </Link>
+                  </li>
+                )}
+              </ul>
             )}
           </div>
         </div>
@@ -95,8 +93,8 @@ export default CaseStudyTemplate
 export const pageQuery = graphql`
   query contentfulCaseStudyBySlug(
     $slug: String!
-    $previousPostSlug: String
-    $nextPostSlug: String
+    $previousCaseStudySlug: String
+    $nextCaseStudySlug: String
   ) {
     contentfulCaseStudies(slug: { eq: $slug }) {
       slug
@@ -116,11 +114,11 @@ export const pageQuery = graphql`
         }
       }
     }
-    previous: contentfulCaseStudies(slug: { eq: $previousPostSlug }) {
+    previous: contentfulCaseStudies(slug: { eq: $previousCaseStudySlug }) {
       slug
       title
     }
-    next: contentfulCaseStudies(slug: { eq: $nextPostSlug }) {
+    next: contentfulCaseStudies(slug: { eq: $nextCaseStudySlug }) {
       slug
       title
     }
