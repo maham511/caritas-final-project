@@ -54,7 +54,7 @@ const Carousel = ({ data }) => {
 
   return (
     <div ref={slideRef} className="m-2 select-none">
-      <h2 className='text-center m-6 md:p-4'>Our Highlights</h2>
+      <h2 className="text-center m-6 md:p-4">Our Highlights</h2>
       <div className="relative">
         <GatsbyImage
           image={allImages[currentIndex].image.gatsbyImageData}
@@ -62,10 +62,14 @@ const Carousel = ({ data }) => {
         />
         <div className="absolute w-full top-1/2 transform -translate-y-1/2 px-3 flex justify-between items-center">
           <Button
+            aria-label="Left Align"
+            aria-hidden="true"
             onClick={handleOnPreviousClick}
             icon={<RiArrowLeftSLine size={80} color="white" />}
           />
           <Button
+            aria-label="Right Align"
+            aria-hidden="true"
             onClick={handleOnNextClick}
             icon={<RiArrowRightSLine size={80} color="white" />}
           />
@@ -87,7 +91,7 @@ export default function MyCarousel(props) {
               slug
               alt
               image {
-                gatsbyImageData(layout: FULL_WIDTH, width: 424, height: 212)
+                gatsbyImageData(layout: FULL_WIDTH, width: 600, height: 250)
               }
             }
           }
