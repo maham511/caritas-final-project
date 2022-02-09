@@ -2,6 +2,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
+import ExitModal from '../ExitModal/exitModal'
 
 const CaseStudyPreview = ({ caseStudies }) => {
   if (!caseStudies) return null
@@ -37,6 +38,7 @@ const CaseStudyPreview = ({ caseStudies }) => {
                   <span className="mt-2">Read More</span>
                 </div>
               </Link>
+              <ExitModal />
             </li>
           )
         })}
