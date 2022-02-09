@@ -24,7 +24,7 @@ class RootIndex extends React.Component {
           }
           onClick={handleClick}
           text="See our success stories"
-          icon={<FaRegArrowAltCircleRight size={30} className="ml-5"/>}
+          icon={<FaRegArrowAltCircleRight size={30} className="ml-5" />}
           type={'button'}
         />
       </Layout>
@@ -39,33 +39,3 @@ RootIndex.propTypes = {
 }
 
 export default RootIndex
-
-export const pageQuery = graphql`
-  query HomeQuery {
-    allContentfulCaseStudies(sort: { fields: updatedAt }) {
-      nodes {
-        title
-        slug
-        name
-        image {
-          gatsbyImageData(
-            layout: FULL_WIDTH
-            placeholder: BLURRED
-            width: 424
-            height: 212
-          )
-        }
-        story {
-          internal {
-            content
-          }
-        }
-        childContentfulCaseStudiesStoryTextNode {
-          childMarkdownRemark {
-            excerpt
-          }
-        }
-      }
-    }
-  }
-`
