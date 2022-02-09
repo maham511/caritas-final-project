@@ -8,8 +8,9 @@ const Button = ({ text, icon, onClick, className, type }) => {
         className={className}
         onClick={(event) => onClick(event)}
         type={type}
+        aria-label="reusable button"
       >
-        <span className="pb-1.5">{text}</span>
+        {text}
         {icon}
       </button>
     </div>
