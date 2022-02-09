@@ -51,18 +51,22 @@ class CaseStudyTemplate extends React.Component {
             {(previous || next) && (
               <ul className="flex flex-wrap justify-center text-sm md:text-base text-red-600 text-center m-10">
                 {previous && (
-                  <li className="rounded mt-5 mb-5 transition ease-out duration-500 p-2 hover:bg-red-600 hover:text-white border-2 border-red-600 hover:border-transparent w-32 m-4">
-                    <Link to={`/caseStudies/${previous.slug}`} rel="prev">
-                      ← Previous
-                    </Link>
-                  </li>
+                  <Link
+                    to={`/caseStudies/${previous.slug}`}
+                    rel="prev"
+                    className="rounded mt-5 mb-5 transition ease-out duration-500 p-2 hover:bg-red-600 hover:text-white border-2 border-red-600 hover:border-transparent w-32 m-4"
+                  >
+                    <li>← Previous</li>
+                  </Link>
                 )}
                 {next && (
-                  <li className="rounded mt-5 mb-5 transition ease-out duration-500 p-2 hover:bg-red-600 hover:text-white border-2 border-red-600 hover:border-transparent w-32 m-4">
-                    <Link to={`/caseStudies/${next.slug}`} rel="next">
-                      Next →
-                    </Link>
-                  </li>
+                  <Link
+                    to={`/caseStudies/${next.slug}`}
+                    rel="next"
+                    className="rounded mt-5 mb-5 transition ease-out duration-500 p-2 hover:bg-red-600 hover:text-white border-2 border-red-600 hover:border-transparent w-32 m-4"
+                  >
+                    <li>Next →</li>
+                  </Link>
                 )}
               </ul>
             )}
