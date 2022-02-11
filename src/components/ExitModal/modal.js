@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const Modal = ({ handleClose }) => {
   return (
     <>
-      <div className="z-10 rounded-sm  fixed top-0 left-0 w-full modal-overlay absolute opacity-95">
+      <div className="backdrop-blur-sm z-10 rounded-sm  fixed top-0 left-0 w-full h-screen modal-overlay absolute opacity-95">
         <div className="flex items-center">
           <div className="mt-8 p-6 bg-white rounded-sm border border-red-600 border-4 shadow-md dark:bg-gray-800 dark:border-gray-700 m-auto">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -27,7 +27,6 @@ const Modal = ({ handleClose }) => {
             >
               No thanks...
             </button>
-            <button></button>
           </div>
         </div>
       </div>
