@@ -5,6 +5,7 @@ import Home from '../components/Home'
 import Button from '../components/Button'
 import { navigate } from 'gatsby'
 import { FaRegArrowAltCircleRight } from 'react-icons/fa'
+import ExitModal from '../components/ExitModal/exitModal'
 
 class RootIndex extends React.Component {
   render() {
@@ -16,6 +17,7 @@ class RootIndex extends React.Component {
     }
     return (
       <Layout location={this.props.location}>
+        <ExitModal />
         <Home />
         <Button
           className={

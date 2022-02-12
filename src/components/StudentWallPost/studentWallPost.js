@@ -3,6 +3,7 @@ import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { FaRegArrowAltCircleLeft } from 'react-icons/fa'
 import { ImQuotesLeft, ImQuotesRight } from 'react-icons/im'
+import ExitModal from '../ExitModal/exitModal'
 
 const StudentWallPost = ({ studentWallPosts }) => {
   if (!studentWallPosts) return null
@@ -12,6 +13,9 @@ const StudentWallPost = ({ studentWallPosts }) => {
       <h1 className="text-center text-2xl pt-5 p-10 md:text-4xl">
         Student Wall
       </h1>
+      <div>
+        <ExitModal />
+      </div>
       <ul className="grid grid-cols-1 p-4 sm:grid-cols-2 p-2 gap-4 md:grid-cols-3 gap-8 bg-gray-200 rounded">
         {studentWallPosts.map((wallPost) => {
           return (
@@ -28,6 +32,7 @@ const StudentWallPost = ({ studentWallPosts }) => {
                   image={wallPost.image.gatsbyImageData}
                 />
               </div>
+
               <div
                 className="flex flex-1 font-bolder font-black italic
               bg-blend-darken leading-loose items-center transition ease-out duration-500"
