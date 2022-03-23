@@ -1,4 +1,4 @@
-"/* eslint-disable */"
+'/* eslint-disable */'
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
@@ -52,6 +52,12 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
+    },
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: 'caritasfinalproject',
+      },
     },
   ],
 }
