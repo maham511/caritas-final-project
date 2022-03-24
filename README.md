@@ -8,6 +8,7 @@ Tech Lead - Mitch Lloyd
 Trainees - Terry Calderbank, Humail Khan, Mohammed Al-Abdulhamid, Maha Malik
 
 Project [site](https://caritas-education.netlify.app/) deployed on Netlify. Auto-deploys on new case study entry
+(Site currently redeployed on aws([site](http://caritasfinalproject.s3-website.eu-west-2.amazonaws.com/))
 
 
 ## Project Brief
